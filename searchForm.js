@@ -1,6 +1,6 @@
 // SearchForm.js
 import React from 'react';
-import {Formik,Form,Field} form 'formik';
+import {Formik,Form,Field} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
