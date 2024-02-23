@@ -1,8 +1,9 @@
 // SearchForm.js
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import {Formik,Form,Field} form 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+
 
 const validationSchema = Yup.object().shape({
   query: Yup.string().required('Search query is required'),
@@ -25,10 +26,7 @@ const SearchForm = () => {
       <Formik
         initialValues={{ query: '' }}
         validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ isSubmitting }) => (
-          <Form>
+        onSubmit={handleSubmit}> {({ isSubmitting }) => (<Form>
             <Field type="text" name="query" placeholder="Search..." />
             <ErrorMessage name="query" component="div" />
             <button type="submit" disabled={isSubmitting}>
